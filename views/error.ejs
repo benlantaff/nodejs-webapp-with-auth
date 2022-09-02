@@ -1,0 +1,19 @@
+<%- include('includes/header.ejs') %>
+  </head>
+  <body class="d-flex flex-column h-100">
+      <%- include('includes/navigation.ejs') %>
+    <main class="flex-shrink-0">
+      <div class="container">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-md-10 mx-auto col-lg-5">
+            <h1> Error  <%= statusCode %></h1>
+            <p><%= errorMessage %></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('includes/footer.ejs') %>
+
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <%- include('includes/end.ejs') %>

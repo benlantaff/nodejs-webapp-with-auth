@@ -1,0 +1,31 @@
+<%- include('includes/header.ejs') %>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <%- include('includes/navigation.ejs') %>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+        <h1 class="mt-5">Basic app + authentication + authorization</h1>
+        <p class="lead">
+          Congrats, you got this application working!  Think of this project as a starter to your own application.</p>
+     <p class="lead">
+          By using this application to get started, you are inheriting several useful features for user authentication + authorization.
+          <ul class="custom-ul">
+            <li>User registration</li>
+            <li>Login + logout</li>
+            <li>Email verification</li>
+            <li>Password reset</li>
+            <li>Session tracking</li>
+          </ul>
+        </p>
+             <p class="lead">
+          This tiny application also provides route protection, custom middleware for error handling, and security features that help you be better protected from various attacks!
+        </p>
+      </div>
+    </main>
+
+    <%- include('includes/footer.ejs') %>
+
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <%- include('includes/end.ejs') %>

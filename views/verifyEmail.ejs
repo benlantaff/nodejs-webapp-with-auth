@@ -1,0 +1,52 @@
+<%- include('includes/header.ejs') %>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <%- include('includes/navigation.ejs') %>
+
+    <main class="flex-shrink-0">
+      <div class="container">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form
+              class="p-4 p-md-5 border rounded-3 bg-light"
+              action="/verifyEmail"
+              method="POST"
+            >
+              <% if (errorMessage){ %>
+
+              <span
+                id="invalidEmailOrPassword"
+                class="custom-invalid"
+                ><%= errorMessage %></span
+              >
+
+              <% } %>
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control custom-input"
+                  id="verificationCode"
+                  name="verificationCode"
+                  placeholder="verify"
+                  required
+                />
+                <label for="verificationCode">Verification Code</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                Verify
+              </button>
+              <hr class="my-4" />
+              <div class="d-grid gap-2 col-med-6 col-lg-6 mx-auto">
+                <a href="/resend" class="btn btn-success" role="button"
+                  >Resend email</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('includes/footer.ejs') %>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <%- include('includes/end.ejs') %>

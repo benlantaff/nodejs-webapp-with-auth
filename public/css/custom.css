@@ -1,0 +1,18 @@
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.custom-ul {
+  font-weight: bold;
+}
+
+.custom-invalid {
+  color: red;
+  padding-left: 5px;
+}
+
+.custom-input {
+  text-align: center;
+  font: bold;
+  font-size: 30px;
+}
