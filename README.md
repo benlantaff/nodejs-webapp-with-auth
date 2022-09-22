@@ -11,8 +11,8 @@ Node.js web application using express.js and mongodb. Includes sessions, securit
 
 - `git clone https://github.com/benlantaff/nodejs-webapp-with-auth.git` - Clone this repo to your local machine.
 - `npm install` - Download all the application dependencies
-- Update the session secret [app.js]
-- Update the database and email details [utilities.js]
+- Update the session secret [`app.js`]
+- Update the database and email details [`utilities.js`]
 - `node server` - Fire up the server and navigate to the app [http://localhost:9001](http://localhost:9001)
 
 # Resrouces
