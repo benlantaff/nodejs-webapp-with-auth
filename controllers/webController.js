@@ -62,14 +62,14 @@ exports.getLogout = (req, res) => {
   });
 };
 
-exports.renderCreateAccountPage = (req, res) => {
+exports.renderCreateAccountPage = (req, res, next) => {
   if (req.session.isLoggedIn) {
     return res.redirect('/');
   }
   res.render('createAccount', { errorMessage: '' });
 };
 
-exports.renderVerifyEmailPage = (req, res) => {
+exports.renderVerifyEmailPage = (req, res, next) => {
   if (req.session.isLoggedIn) {
     return res.redirect('/');
   }
@@ -79,7 +79,7 @@ exports.renderVerifyEmailPage = (req, res) => {
   });
 };
 
-exports.postVerifyEmailPage = (req, res) => {
+exports.postVerifyEmailPage = (req, res, next) => {
   let code = req.body.verificationCode;
 
   User.findOne({ verificationCode: code })
@@ -99,7 +99,7 @@ exports.postVerifyEmailPage = (req, res) => {
     });
 };
 
-exports.postCreateAccountPage = (req, res) => {
+exports.postCreateAccountPage = (req, res, next) => {
   let email = req.body.email;
   let password = req.body.password;
   req.session.verificationEmail = '';
