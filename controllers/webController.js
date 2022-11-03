@@ -176,7 +176,7 @@ exports.postReset = (req, res, next) => {
           utilities.sendEmail({
             email: req.body.email,
             subject: 'Password reset',
-            message: `Password reset link: ${util.host}/reset/${token}`, // Replace this with your own house
+            message: `Password reset link: ${utilities.host}/reset/${token}`, // Replace this with your own house
           });
         } catch (err) {
           next(new AppError('Send email error', 500));
